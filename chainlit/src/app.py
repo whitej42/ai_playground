@@ -14,9 +14,11 @@ from langchain_core.prompts.chat import (
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
 prompt_template = ChatPromptTemplate.from_messages([
+    # Provides instructions or context for the LLM e.g. I am a helpful assistant for suggesing books.
     SystemMessagePromptTemplate.from_template(
-        "You are a helpful assistant that gives concise, friendly answers regarding books, movies & TV shows."
+        "You are a helpful assistant that gives concise, friendly answers."
     ),
+    # Pass user input to the prompt from Chainlit
     HumanMessagePromptTemplate.from_template("{user_input}")
 ])
 
