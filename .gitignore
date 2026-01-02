@@ -1,0 +1,6 @@
+.env
+
+# Chainlit files
+.chainlit/
+.files/
+chainlit.md

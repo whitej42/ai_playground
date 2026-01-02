@@ -30,3 +30,9 @@ chainlit.rebuild: # Force rebuild (no cache) and run
 
 chainlit.nuke: # Remove containers, images, volumes (DANGEROUS)
 	docker-compose -f chainlit/.docker/docker-compose.yaml down --rmi local --volumes --remove-orphans
+
+chainlit.logs: # View Chainlit container logs
+	docker-compose -f chainlit/.docker/docker-compose.yaml logs -f
+
+chainlit.exec: # Exec into Chainlit container
+	 docker-compose -f chainlit/.docker/docker-compose.yaml exec -it chainlit bash
