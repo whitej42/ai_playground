@@ -1,3 +1,7 @@
+##################################
+# Basic example using OpenAI SDK #
+##################################
+
 from openai import AsyncOpenAI
 import chainlit as cl
 
